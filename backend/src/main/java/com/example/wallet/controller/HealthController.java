@@ -1,4 +1,4 @@
-package com.example.wallet;
+package com.example.wallet.controller;
 
 import java.util.Map;
 import org.springframework.web.bind.annotation.GetMapping;

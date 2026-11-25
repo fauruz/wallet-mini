@@ -1,4 +1,4 @@
-package com.example.wallet;
+package com.example.wallet.security;
 
 import com.example.wallet.service.JwtService;
 import io.jsonwebtoken.Claims;

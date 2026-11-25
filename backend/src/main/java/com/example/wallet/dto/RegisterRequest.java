@@ -1,4 +1,4 @@
-package com.example.wallet;
+package com.example.wallet.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

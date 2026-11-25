@@ -1,3 +1,3 @@
-package com.example.wallet;
+package com.example.wallet.dto;
 
 public record AuthResponse(String accessToken) {}

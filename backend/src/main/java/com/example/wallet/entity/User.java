@@ -1,4 +1,4 @@
-package com.example.wallet;
+package com.example.wallet.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,5 +1,7 @@
-package com.example.wallet;
+package com.example.wallet.controller;
 
+import com.example.wallet.entity.User;
+import com.example.wallet.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,5 +1,6 @@
-package com.example.wallet;
+package com.example.wallet.service;
 
+import com.example.wallet.entity.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

@@ -1,5 +1,10 @@
-package com.example.wallet;
+package com.example.wallet.controller;
 
+import com.example.wallet.dto.AuthResponse;
+import com.example.wallet.dto.LoginRequest;
+import com.example.wallet.dto.RegisterRequest;
+import com.example.wallet.entity.User;
+import com.example.wallet.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
