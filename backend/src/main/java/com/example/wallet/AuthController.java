@@ -20,4 +20,9 @@ public class AuthController {
         User user = authService.register(request);
         return Map.of("id", user.getId(), "email", user.getEmail());
     }
+
+    @PostMapping("/login")
+    public AuthResponse login(@Valid @RequestBody LoginRequest request) {
+        return authService.login(request);
+    }
 }
