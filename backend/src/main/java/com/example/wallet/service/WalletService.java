@@ -31,7 +31,9 @@ public class WalletService {
 
     @Transactional
     public Wallet topUp(Long userId, BigDecimal amount) {
-        Wallet wallet = getByUserId(userId);
+        Long id = walletRepository.findIdByUserId(userId)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Wallet not found"));
+        Wallet wallet = walletRepository.findByIdForUpdate(id).orElseThrow();
         wallet.setBalance(wallet.getBalance().add(amount));
         return walletRepository.save(wallet);
     }
