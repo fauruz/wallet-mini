@@ -1,5 +1,6 @@
 package com.example.wallet;
 
+import com.example.wallet.service.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import jakarta.servlet.FilterChain;
@@ -33,7 +34,6 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                         claims.getSubject(), null, List.of());
                 SecurityContextHolder.getContext().setAuthentication(auth);
             } catch (JwtException | IllegalArgumentException e) {
-                // token sai hoặc hết hạn: không đăng nhập, request sẽ nhận 401
             }
         }
         chain.doFilter(request, response);
