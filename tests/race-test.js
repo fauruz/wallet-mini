@@ -10,6 +10,7 @@ const results = await Promise.all(
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`,
+                'Idempotency-Key': crypto.randomUUID(),
             },
             body: JSON.stringify({ toEmail, amount: AMOUNT }),
         }).then((r) => r.status)
